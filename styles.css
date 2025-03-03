@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajwal", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightslategrey;
+}
+main{
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: slategray;
+}
+main form{
+
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label div{
+    font-size: 10px;
+}
+

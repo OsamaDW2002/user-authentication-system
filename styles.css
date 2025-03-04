@@ -14,7 +14,7 @@ body{
     align-items: center;
     background-color: lightslategrey;
 }
-main{
+main, form{
     width: 40vw;
     height: 50vh;
     display: flex;

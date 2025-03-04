@@ -1,43 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Tajwal", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
-body{
+
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightslategrey;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
-main, form{
+
+main, form {
     width: 40vw;
-    height: 50vh;
+    max-width: 400px;
+    min-width: 300px;
+    height: auto;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
-    background-color: slategray;
+    gap: 20px;
+    background-color: #a1b3c2;
+    border-radius: 10px;
 }
-main form{
 
-}
-.input-fields{
+.input-fields {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    width: 100%;
 }
-label{
+
+label {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-label div{
-    font-size: 10px;
+    font-size: 14px;
 }
 
+label div {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    width: 100px;
+    max-width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main, form {
+        width: 90vw;
+        max-width: 350px;
+    }
+
+    .input-fields {
+        gap: 15px;
+    }
+
+    button {
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main, form {
+        width: 95vw;
+        max-width: 300px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        height: 35px;
+    }
+}
+
+#message {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}

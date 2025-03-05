@@ -15,6 +15,14 @@ The app features a **responsive UI** and provides **real-time feedback** without
 
 ---
 
+### 🔐 **Hardcoded Credentials**  
+For testing purposes, the following username and password are used:  
+
+- **Username:** `osama`  
+- **Password:** `123`  
+
+---
+
 ## 📜 User Stories  
 
 ### ✅ **User Login**  

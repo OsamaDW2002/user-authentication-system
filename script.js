@@ -1,7 +1,7 @@
 const validUsername = "osama";
 const validPassword = "123";
 
-function authenticateUser(username, password) {
+const authenticateUser = (username, password)=> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (username === validUsername && password === validPassword) {
@@ -13,24 +13,25 @@ function authenticateUser(username, password) {
     });
 }
 
-document.querySelector("form").addEventListener("submit", function (event) {
+document.querySelector("form").addEventListener("submit",  (event)=> {
     event.preventDefault();
 
-    const username = document.querySelector("input[type='text']").value;
-    const password = document.querySelector("input[type='password']").value;
+    const username = document.getElementById("name").value;
+    const password = document.getElementById("password").value;
     const messageParagraph = document.getElementById("message");
 
     authenticateUser(username, password)
         .then((message) => {
             messageParagraph.textContent = message;
-            messageParagraph.style.color = "green";
+            messageParagraph.classList.add("accepted");
         })
         .catch((error) => {
             messageParagraph.textContent = error;
-            messageParagraph.style.color = "red";
+            messageParagraph.classList.add("rejected");
         }).finally(()=>{
             setTimeout(()=> {
                 messageParagraph.textContent= "";
+                event.target.reset();
             },5000);
         });
 });
